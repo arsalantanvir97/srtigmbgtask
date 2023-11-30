@@ -42,6 +42,7 @@ const Home = () => {
           !isValidLastName.isValid ||
           !isValidAge.isValid
         }
+        path={'/user-data'}
       />
     </>
   )
