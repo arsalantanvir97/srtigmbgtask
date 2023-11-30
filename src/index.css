@@ -67,3 +67,14 @@ code {
   cursor: not-allowed;
   color: #7f8c8d;
 }
+.boxstyling {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.boxstyling p {
+  padding-top: 4px;
+}

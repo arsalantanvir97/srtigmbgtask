@@ -21,10 +21,10 @@ const UserData = () => {
             setcountry(e.target.value)
           }}
         >
-          <option>Select a country</option>
+          <option disabled={true}>Select a country</option>
           {countryList?.length > 0 &&
             countryList?.map((count, index) => (
-              <option key={index} value={JSON.stringify(count)}>
+              <option key={index} value={count}>
                 {count}
               </option>
             ))}
