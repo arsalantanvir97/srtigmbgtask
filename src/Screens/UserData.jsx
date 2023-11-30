@@ -3,11 +3,12 @@ import { countryList } from '../utils/countries'
 import InputField from '../Components/InputField'
 import { isValidInput } from '../utils/Validation'
 import Button from '../Components/Button'
+import useSessionStorage from '../Hooks/useSessionStorage'
 
 const UserData = () => {
-  const [country, setcountry] = useState('')
-  const [city, setcity] = useState('')
-  const [zipcode, setzipcode] = useState(0)
+  const [country, setcountry] = useSessionStorage('country', '')
+  const [city, setcity] = useSessionStorage('city', '')
+  const [zipcode, setzipcode] = useSessionStorage('zipcode', 0)
   const isValidCity = isValidInput(city, 'city')
   const isValidZipCode = isValidInput(zipcode, 'zipcode')
   return (

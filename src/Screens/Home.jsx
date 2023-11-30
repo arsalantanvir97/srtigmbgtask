@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import InputField from '../Components/InputField'
 import Button from '../Components/Button'
 import { isValidInput } from '../utils/Validation'
+import useSessionStorage from '../Hooks/useSessionStorage'
 
 const Home = () => {
-  const [firstName, setfirstName] = useState('')
-  const [lastName, setlastName] = useState('')
-  const [age, setage] = useState(0)
+  const [firstName, setfirstName] = useSessionStorage('firstName', '')
+  const [lastName, setlastName] = useSessionStorage('lastName', '')
+  const [age, setage] = useSessionStorage('age', 0)
   const isValidFirstName = isValidInput(firstName, 'name')
   const isValidLastName = isValidInput(lastName, 'name')
   const isValidAge = isValidInput(age, 'age')
